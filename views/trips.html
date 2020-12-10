@@ -1,0 +1,53 @@
+<section class="block justify-content-end fluid">
+    <section id="sidebar"></section>
+    <section class="col-10 lg-9 md-12 sm-12 bg md-padding-six sm-padding-six">
+        <div class="hidden md-visible sm-visible">
+            <div class="block align-items-center justify-content-between collapse">
+                <div class="col-max">
+                    <a onclick="goTo('/')" class="txt-bold">
+                        <i class="logo" style="font-size: 2rem;"></i>
+                    </a>
+                </div>
+                <div class="col-max">
+                    <a onclick="sideBarSystem()" class="icon icon-lg icon-bold">
+                        <i class="XO-list"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 hidden md-visible sm-visible"></div>
+        <div class="block">
+            <div class="col-12 padding-six md-padding-none sm-padding-none">
+                <div class="col-12 bg-light">
+                    <div class="block justify-content-end">
+                        <div class="block col-12 title-one sm-title-four align-items-center">
+                            <span class="icon icon-md icon-rounded icon-bold margin-right-six">
+								<i class="XO-trip"></i>
+							</span>
+                            <span class="tag tag-blank tag-bold padding-left-none">Liste Des Voyage</span>
+                        </div>
+                        <div class="break-five"></div>
+                        <div class="col position-relative">
+                            <span class="icon icon-lg icon-blank icon-bold position-absolute position-center-left">
+								<i class="XO-loop"></i>
+							</span>
+                            <input onkeyup="tripSearch(event)" name="search" type="search" class="formbox formbox-lg horizontal-fluid" style="padding-left: 44px;" placeholder="Voyage...." />
+                        </div>
+                        <div class="col-max usrtrp">
+                            <a onclick="getTrips('1')" class="icon icon-lg icon-rounded icon-bold">
+                                <i class="XO-check"></i>
+                            </a>
+                        </div>
+                        <div class="col-max usrtrp">
+                            <a onclick="getTrips('0')" class="icon icon-lg icon-rounded icon-bold">
+                                <i class="XO-ban"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 hidden md-visible sm-visible"></div>
+            <div id="display" class="block horizontal-fluid"></div>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/styles/XOFont/style.css" />
+    <link rel="stylesheet" href="static/styles/logo/style.css" />
+    <link rel="stylesheet" href="static/styles/XO.css" />
+    <title>Tripia</title>
+    <style>
+        .header {
+            font-size: 8rem;
+            font-weight: 400;
+            letter-spacing: 20px;
+        }
+        
+        .subheader {
+            font-weight: 300;
+            font-size: 40px;
+            word-spacing: 10px;
+            letter-spacing: 3px;
+        }
+        
+        .head {
+            font-weight: 250;
+            font-size: 4rem;
+            padding: 10rem 0;
+        }
+        
+        .loading {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #001f4062;
+            z-index: 1000000000000;
+        }
+        
+        .loading::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 10px solid var(--bold);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border-top: unset;
+            border-left: unset;
+            transform: translate(-50%, -50%);
+            animation: btnload 1s infinite normal linear;
+            z-index: 1000000000000;
+        }
+        
+        .loading::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 10px solid var(--bold_light);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border-top: unset;
+            border-left: unset;
+            transform: translate(-50%, -50%);
+            animation: btnload 1s infinite reverse linear;
+            z-index: 1000000000000;
+        }
+        
+        #splash {
+            z-index: -1;
+            background-image: radial-gradient(#00000099, #00000099), url("static/assets/mainSplash.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        
+        #splash i {
+            font-size: 40rem;
+        }
+        
+        @media (max-width: 767.98px) {
+            #splash i {
+                font-size: 28rem;
+            }
+        }
+        
+        .toolbar {
+            border: 1px solid #1d1d1d;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #eeeeee;
+        }
+        
+        .tool-box {
+            width: 100%;
+            padding: 5px;
+        }
+        
+        .tool-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        
+        .tool {
+            display: inline-flex;
+            align-items: stretch;
+            margin: 2px;
+        }
+        
+        .tool select {
+            width: 100px;
+            border: 1px solid lightgrey;
+            padding: 5px;
+            font-size: 16px;
+        }
+        
+        .tool.sec input {
+            width: 100px;
+            border: 1px solid lightgrey;
+            padding: 5px;
+            border-left: unset;
+            font-size: 16px;
+        }
+        
+        .tool-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            font-size: 1rem;
+            color: #1d1d1d;
+            background-color: lightgrey;
+            border: unset;
+        }
+        
+        [name="description"] {
+            background-color: white;
+            height: 500px;
+            border-top: unset;
+            padding: 1rem 1.2rem;
+            overflow-y: scroll;
+        }
+        
+        [name="desc"] img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div class="loading"></div>
+    </div>
+    <script src="static/scripts/XO.js"></script>
+    <script src="static/scripts/extras.js"></script>
+    <script src="static/scripts/menus.js"></script>
+    <script src="static/scripts/validations.js"></script>
+    <script src="static/scripts/users.js"></script>
+    <script src="static/scripts/trips.js"></script>
+    <script src="static/scripts/reservations.js"></script>
+    <script src="static/scripts/routes.js"></script>
+    <script type="module" src="static/scripts/XO.Elements.js"></script>
+</body>
+
+</html>

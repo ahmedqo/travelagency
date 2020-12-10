@@ -1,0 +1,669 @@
+:root {
+    --default: #fafafa;
+    --primary: #1a88ff;
+    --secondary: #686897;
+    --success: #46d366;
+    --info: #33cde5;
+    --warning: #ffc61a;
+    --danger: #dd3b4b;
+    --bold: #454545;
+    --default_light: #ffffff;
+    --primary_light: #e8f3ff;
+    --secondary_light: #f0f0f5;
+    --success_light: #edfbf0;
+    --info_light: #ebfafc;
+    --warning_light: #fff9e8;
+    --danger_light: #fcebed;
+    --bold_light: #ececec;
+    --default_dark: #7d7d7d;
+    --primary_dark: #0d4480;
+    --secondary_dark: #34344c;
+    --success_dark: #236a33;
+    --info_dark: #1a6773;
+    --warning_dark: #80630d;
+    --danger_dark: #6f1e26;
+    --bold_dark: #232323;
+}
+
+.close {
+    background-color: unset;
+    text-decoration: none;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 50%;
+    font-weight: bolder;
+    border: unset;
+    font-weight: 500;
+}
+
+.close:hover {
+    background-color: #00000020;
+    cursor: pointer;
+}
+
+.alert {
+    position: relative;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.alert :not(.close) {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.alert {
+    border-color: var(--default_dark);
+    background-color: var(--default_light);
+}
+
+.alert.primary {
+    border-color: var(--primary_dark);
+    background-color: var(--primary_light);
+}
+
+.alert.secondary {
+    border-color: var(--secondary_dark);
+    background-color: var(--secondary_light);
+}
+
+.alert.success {
+    border-color: var(--success_dark);
+    background-color: var(--success_light);
+}
+
+.alert.info {
+    border-color: var(--info_dark);
+    background-color: var(--info_light);
+}
+
+.alert.warning {
+    border-color: var(--warning_dark);
+    background-color: var(--warning_light);
+}
+
+.alert.danger {
+    border-color: var(--danger_dark);
+    background-color: var(--danger_light);
+}
+
+.alert.dark {
+    border-color: var(--bold_dark);
+    background-color: var(--bold_light);
+}
+
+.alert * {
+    color: var(--default_dark);
+}
+
+.alert.primary * {
+    color: var(--primary_dark);
+}
+
+.alert.secondary * {
+    color: var(--secondary_dark);
+}
+
+.alert.success * {
+    color: var(--success_dark);
+}
+
+.alert.info * {
+    color: var(--info_dark);
+}
+
+.alert.warning * {
+    color: var(--warning_dark);
+}
+
+.alert.danger * {
+    color: var(--danger_dark);
+}
+
+.alert.dark * {
+    color: var(--bold_dark);
+}
+
+.card {
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.header {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.body {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.header+.body {
+    padding-top: 0;
+}
+
+.card {
+    background-color: var(--default_light);
+    border-color: var(--default_dark);
+}
+
+.card.primary {
+    background-color: var(--primary_light);
+    border-color: var(--primary_dark);
+}
+
+.card.secondary {
+    background-color: var(--secondary_light);
+    border-color: var(--secondary_dark);
+}
+
+.card.success {
+    background-color: var(--success_light);
+    border-color: var(--success_dark);
+}
+
+.card.info {
+    background-color: var(--info_light);
+    border-color: var(--info_dark);
+}
+
+.card.warning {
+    background-color: var(--warning_light);
+    border-color: var(--warning_dark);
+}
+
+.card.danger {
+    background-color: var(--danger_light);
+    border-color: var(--danger_dark);
+}
+
+.card.dark {
+    background-color: var(--bold_light);
+    border-color: var(--bold_dark);
+}
+
+.box {
+    position: relative;
+    padding: 10px;
+    -webkit-box-shadow: 0 1px 5px 2px #00000045;
+    box-shadow: 0 1px 5px 2px #00000045;
+}
+
+.box * {
+    margin: 0;
+    padding: 0;
+}
+
+.box .header {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.box p {
+    font-size: 16px;
+}
+
+.box {
+    background-color: var(--default);
+}
+
+.box.primary {
+    background-color: var(--primary);
+}
+
+.box.secondary {
+    background-color: var(--secondary);
+}
+
+.box.success {
+    background-color: var(--success);
+}
+
+.box.info {
+    background-color: var(--info);
+}
+
+.box.warning {
+    background-color: var(--warning);
+}
+
+.box.danger {
+    background-color: var(--danger);
+}
+
+.box.dark {
+    background-color: var(--bold);
+}
+
+.box.danger *,
+.box.dark *,
+.box.info *,
+.box.primary *,
+.box.secondary *,
+.box.success * {
+    color: #fff;
+}
+
+.panel {
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.panel .header {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: var(--default_dark);
+}
+
+.panel .body,
+.panel .footer {
+    padding: 10px;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.panel .footer {
+    background-color: var(--default);
+}
+
+.panel {
+    border-color: var(--default_dark);
+}
+
+.panel.primary {
+    border-color: var(--primary_dark);
+}
+
+.panel.secondary {
+    border-color: var(--secondary_dark);
+}
+
+.panel.success {
+    border-color: var(--success_dark);
+}
+
+.panel.info {
+    border-color: var(--info_dark);
+}
+
+.panel.warning {
+    border-color: var(--warning_dark);
+}
+
+.panel.danger {
+    border-color: var(--danger_dark);
+}
+
+.panel.dark {
+    border-color: var(--bold_dark);
+}
+
+.panel.primary .header {
+    background-color: var(--primary);
+}
+
+.panel.secondary .header {
+    background-color: var(--secondary);
+}
+
+.panel.success .header {
+    background-color: var(--success);
+}
+
+.panel.info .header {
+    background-color: var(--info);
+}
+
+.panel.warning .header {
+    background-color: var(--warning);
+}
+
+.panel.danger .header {
+    background-color: var(--danger);
+}
+
+.panel.dark .header {
+    background-color: var(--bold);
+}
+
+.panel.primary .footer {
+    background-color: var(--primary_light);
+}
+
+.panel.secondary .footer {
+    background-color: var(--secondary_light);
+}
+
+.panel.success .footer {
+    background-color: var(--success_light);
+}
+
+.panel.info .footer {
+    background-color: var(--info_light);
+}
+
+.panel.warning .footer {
+    background-color: var(--warning_light);
+}
+
+.panel.danger .footer {
+    background-color: var(--danger_light);
+}
+
+.panel.dark .footer {
+    background-color: var(--bold_light);
+}
+
+.panel .close,
+.panel .header {
+    color: #fff;
+}
+
+.panel.warning .close,
+.panel.warning .header {
+    color: #1d1d1d;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdownField {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid var(--default_dark);
+    font-size: 1.25rem;
+    border-radius: 5px;
+    padding: 0.543rem 1.25rem;
+    padding-right: calc(2.5rem + 10px);
+    font-size: 1.5rem;
+    color: #1d1d1d;
+}
+
+.arrow {
+    width: 10px;
+    height: 10px;
+    border: 5px solid var(--default_dark);
+    -webkit-transform: rotate(45deg) translateY(-50%);
+    -ms-transform: rotate(45deg) translateY(-50%);
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 1.25rem;
+    border-top: unset;
+    border-left: unset;
+    cursor: pointer;
+}
+
+.items {
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    max-height: calc(44px * 5);
+    overflow-y: auto;
+    top: 105%;
+    background-color: var(--default_light);
+    border: 1px solid var(--default_dark);
+    -webkit-transition: heigth 0.5s ease-in-out;
+    -o-transition: heigth 0.5s ease-in-out;
+    transition: heigth 0.5s ease-in-out;
+    border-radius: 5px;
+    z-index: 100000000;
+}
+
+.dropdown.primary .items {
+    border-color: var(--primary_dark);
+    background-color: var(--primary_light);
+}
+
+.dropdown.secondary .items {
+    border-color: var(--secondary_dark);
+    background-color: var(--secondary_light);
+}
+
+.dropdown.success .items {
+    border-color: var(--success_dark);
+    background-color: var(--success_light);
+}
+
+.dropdown.info .items {
+    border-color: var(--info_dark);
+    background-color: var(--info_light);
+}
+
+.dropdown.warning .items {
+    border-color: var(--warning_dark);
+    background-color: var(--warning_light);
+}
+
+.dropdown.danger .items {
+    border-color: var(--danger_dark);
+    background-color: var(--danger_light);
+}
+
+.dropdown.dark .items {
+    border-color: var(--bold_dark);
+    background-color: var(--bold_light);
+}
+
+.dropdown.primary .arrow {
+    border-color: var(--primary_dark);
+}
+
+.dropdown.secondary .arrow {
+    border-color: var(--secondary_dark);
+}
+
+.dropdown.success .arrow {
+    border-color: var(--success_dark);
+}
+
+.dropdown.info .arrow {
+    border-color: var(--info_dark);
+}
+
+.dropdown.warning .arrow {
+    border-color: var(--warning_dark);
+}
+
+.dropdown.danger .arrow {
+    border-color: var(--danger_dark);
+}
+
+.dropdown.dark .arrow {
+    border-color: var(--bold_dark);
+}
+
+.dropdown.primary .dropdownField {
+    border-color: var(--primary_dark);
+}
+
+.dropdown.secondary .dropdownField {
+    border-color: var(--secondary_dark);
+}
+
+.dropdown.success .dropdownField {
+    border-color: var(--success_dark);
+}
+
+.dropdown.info .dropdownField {
+    border-color: var(--info_dark);
+}
+
+.dropdown.warning .dropdownField {
+    border-color: var(--warning_dark);
+}
+
+.dropdown.danger .dropdownField {
+    border-color: var(--danger_dark);
+}
+
+.dropdown.dark .dropdownField {
+    border-color: var(--bold_dark);
+}
+
+.item p {
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+    color: var(--default_dark);
+}
+
+.item.primary p {
+    color: var(--primary_dark);
+}
+
+.item.secondary p {
+    color: var(--secondary_dark);
+}
+
+.item.success p {
+    color: var(--success_dark);
+}
+
+.item.info p {
+    color: var(--info_dark);
+}
+
+.item.warning p {
+    color: var(--warning_dark);
+}
+
+.item.danger p {
+    color: var(--danger_dark);
+}
+
+.item.dark p {
+    color: var(--bold_dark);
+}
+
+.item:hover p {
+    background-color: var(--default_dark);
+    color: #fff;
+    cursor: pointer;
+}
+
+.item.primary:hover p {
+    background-color: var(--primary_dark);
+    cursor: pointer;
+}
+
+.item.secondary:hover p {
+    background-color: var(--secondary_dark);
+    cursor: pointer;
+}
+
+.item.success:hover p {
+    background-color: var(--success_dark);
+    cursor: pointer;
+}
+
+.item.info:hover p {
+    background-color: var(--info_dark);
+    cursor: pointer;
+}
+
+.item.warning:hover p {
+    background-color: var(--warning_dark);
+    cursor: pointer;
+}
+
+.item.danger:hover p {
+    background-color: var(--danger_dark);
+    cursor: pointer;
+}
+
+.item.dark:hover p {
+    background-color: var(--bold_dark);
+    cursor: pointer;
+}
+
+.item.active p {
+    background-color: var(--default_dark);
+    color: #fff;
+    cursor: pointer;
+}
+
+.item.primary.active p {
+    background-color: var(--primary_dark);
+    cursor: pointer;
+}
+
+.item.secondary.active p {
+    background-color: var(--secondary_dark);
+    cursor: pointer;
+}
+
+.item.success.active p {
+    background-color: var(--success_dark);
+    cursor: pointer;
+}
+
+.item.info.active p {
+    background-color: var(--info_dark);
+    cursor: pointer;
+}
+
+.item.warning.active p {
+    background-color: var(--warning_dark);
+    cursor: pointer;
+}
+
+.item.danger.active p {
+    background-color: var(--danger_dark);
+    cursor: pointer;
+}
+
+.item.dark.active p {
+    background-color: var(--bold_dark);
+    cursor: pointer;
+}

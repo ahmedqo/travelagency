@@ -1,0 +1,64 @@
+<section class="block justify-content-end fluid">
+    <section id="sidebar"></section>
+    <section class="col-10 lg-9 md-12 sm-12 bg md-padding-six sm-padding-six">
+        <div class="hidden md-visible sm-visible">
+            <div class="block align-items-center justify-content-between collapse">
+                <div class="col-max">
+                    <a onclick="goTo('/')" class="txt-bold">
+                        <i class="logo" style="font-size: 2rem;"></i>
+                    </a>
+                </div>
+                <div class="col-max">
+                    <a onclick="sideBarSystem()" class="icon icon-lg icon-bold">
+                        <i class="XO-list"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 hidden md-visible sm-visible"></div>
+        <div class="block">
+            <div class="col-12 padding-six md-padding-none sm-padding-none">
+                <div class="col-12 bg-light">
+                    <div class="block justify-content-end">
+                        <div class="block col-12 title-one sm-title-four align-items-center">
+                            <span class="icon icon-md icon-rounded icon-bold margin-right-six">
+								<i class="XO-document"></i>
+							</span>
+                            <span class="tag tag-lg tag-blank tag-bold padding-left-none">Liste Des Reservations</span>
+                        </div>
+                        <div class="break-five"></div>
+                        <div class="col position-relative">
+                            <span class="icon icon-lg icon-blank icon-bold position-absolute position-center-left">
+								<i class="XO-loop"></i>
+							</span>
+                            <input onkeyup="reservationSearch(event)" name="search" type="search" class="formbox formbox-lg horizontal-fluid" style="padding-left: 44px;" placeholder="Reservation...." />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 hidden md-visible sm-visible"></div>
+            <div class="col-12 padding-six md-padding-none sm-padding-none">
+                <div class="col-12 bg-light">
+                    <div class="col-12">
+                        <div class="block horizontal-fluid">
+                            <table class="table table-primary horizontal-fluid txt-center">
+                                <thead>
+                                    <tr>
+                                        <td class="usrrsv">Client</td>
+                                        <td>Voyage</td>
+                                        <td>Location De Ramassage</td>
+                                        <td>Places</td>
+                                        <td>Prix</td>
+                                        <td>Date</td>
+                                        <td>Action</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="display"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

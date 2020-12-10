@@ -1,0 +1,25 @@
+<section id="menu"></section>
+<section class="block horizontal-fluid justify-content-center padding-vertical-one">
+    <div class="col-5 lg-8 md-12 sm-12">
+        <form class="block justify-content-end" onsubmit="loginUser(event)" enctype="multipart/form-data">
+            <div class="col-12">
+                <h1 class="title-four txt-bold">Authentification</h1>
+            </div>
+            <div class="break-five"></div>
+            <div class="col-12">
+                <span class="tag tag-md tag-blank tag-bold padding-left-none">Pseudo</span>
+                <input onblur="fieldValidation(this)" name="username" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Pseudo" />
+            </div>
+            <div class="col-12">
+                <span class="tag tag-md tag-blank tag-bold padding-left-none">Mot De Passe</span>
+                <div class="position-relative">
+                    <i class="XO-eye position-absolute position-right-center" onclick="passToText(event)" style="margin-right: 14px; cursor: pointer;"></i>
+                    <input onblur="fieldValidation(this)" name="password" type="password" class="formbox formbox-md horizontal-fluid" style="padding-right: 40px;" placeholder="Mot De Passe" />
+                </div>
+            </div>
+            <div class="col-5 md-6 sm-6">
+                <button type="submit" class="vldbtn btn btn-md btn-bold horizontal-fluid">CONNEXION</button>
+            </div>
+        </form>
+    </div>
+</section>

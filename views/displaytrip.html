@@ -1,0 +1,100 @@
+<section class="block justify-content-end fluid">
+    <section id="sidebar"></section>
+    <section class="col-10 lg-9 md-12 sm-12 bg md-padding-six sm-padding-six">
+        <div class="hidden md-visible sm-visible">
+            <div class="block align-items-center justify-content-between collapse">
+                <v class="col-max">
+                    <a onclick="goTo('/')" class="txt-bold">
+                        <i class="logo" style="font-size: 2rem;"></i>
+                    </a>
+                </v>
+                <div class="col-max">
+                    <a onclick="sideBarSystem()" class="icon icon-lg icon-bold">
+                        <i class="XO-list"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 hidden md-visible sm-visible"></div>
+        <div class="block justify-content-center">
+            <div class="col-8 lg-12 md-12 sm-12 padding-six md-padding-none sm-padding-none">
+                <div class="col-12 bg-light">
+                    <div class="block">
+                        <div class="col-12 title-four" name="title"></div>
+                        <div class="col-12">
+                            <div class="slider horizontal-fluid" style="height: 80vh;">
+                                <div class="slider-controll"></div>
+                            </div>
+                        </div>
+                        <div class="col-4 md-6 sm-6">
+                            <span class="icon icon-md icon-rounded icon-bold">
+								<i class="XO-pin"></i>
+							</span>
+                            <span class="tag tag-md tag-blank tag-bold" name="destination"></span>
+                        </div>
+                        <div class="col-4 md-6 sm-6">
+                            <span class="icon icon-md icon-rounded icon-bold">
+								<i class="XO-calendar"></i>
+							</span>
+                            <div class="tag tag-md tag-blank tag-bold" name="date"></div>
+                        </div>
+                        <div class="col-4 md-6 sm-6">
+                            <span class="icon icon-md icon-rounded icon-bold">
+								<i class="XO-home"></i>
+							</span>
+                            <span class="tag tag-md tag-blank tag-bold" name="hotel"></span>
+                        </div>
+                        <div class="col-4 md-6 sm-6">
+                            <span class="icon icon-md icon-rounded icon-bold">
+								<i class="XO-persons"></i>
+							</span>
+                            <span class="tag tag-md tag-blank tag-bold" name="sits"></span>
+                        </div>
+                        <div class="col-4 md-6 sm-6">
+                            <span class="icon icon-md icon-rounded icon-bold">
+								<i class="XO-piggy-bank"></i>
+							</span>
+                            <span class="tag tag-md tag-blank tag-bold" name="price"></span>
+                        </div>
+                        <div class="col-4 md-6 sm-6">
+                            <span class="icon icon-md icon-rounded icon-bold">
+								<i class="XO-clock"></i>
+							</span>
+                            <div class="tag tag-md tag-blank tag-bold" name="time"></div>
+                        </div>
+                        <div class="col-12">
+                            <div class="subtitle-two">Description:</div>
+                            <div name="desc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 hidden md-visible sm-visible"></div>
+            <div class="col-8 lg-12 md-12 sm-12 padding-six md-padding-none sm-padding-none resadm">
+                <div class="col-12 bg-light">
+                    <form class="block justify-content-end" onsubmit="createReservation(event)" enctype="application/x-www-form-urlencoded">
+                        <div class="block col-12 title-one sm-title-four align-items-center">
+                            <span class="icon icon-md icon-rounded icon-bold margin-right-six">
+								<i class="XO-document"></i>
+							</span>
+                            <span class="tag tag-blank tag-bold padding-left-none">Reservation</span>
+                        </div>
+                        <div class="break-five"></div>
+                        <input type="hidden" name="trip" />
+                        <div class="col-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Lieu de ramassage</span>
+                            <select onblur="fieldValidation(this)" name="pickups" class="formbox formbox-md horizontal-fluid"></select>
+                        </div>
+                        <div class="col-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Places</span>
+                            <input onblur="fieldValidation(this)" name="sit" type="number" class="formbox formbox-md horizontal-fluid" placeholder="Places" />
+                        </div>
+                        <div class="col-3 md-6 sm-6">
+                            <button type="submit" class="vldbtn btn btn-md btn-bold horizontal-fluid">RESERVER</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,85 @@
+<section class="block justify-content-end fluid">
+    <section id="sidebar"></section>
+    <section class="col-10 lg-9 md-12 sm-12 bg md-padding-six sm-padding-six">
+        <div class="hidden md-visible sm-visible">
+            <div class="block align-items-center justify-content-between collapse">
+                <div class="col-max">
+                    <a onclick="goTo('/')" class="txt-bold">
+                        <i class="logo" style="font-size: 2rem;"></i>
+                    </a>
+                </div>
+                <div class="col-max">
+                    <a onclick="sideBarSystem()" class="icon icon-lg icon-bold">
+                        <i class="XO-list"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 hidden md-visible sm-visible"></div>
+        <div class="block justify-content-center">
+            <div class="col-8 lg-12 md-12 sm-12 padding-six md-padding-none sm-padding-none">
+                <div class="col-12 bg-light">
+                    <form class="block justify-content-end" onsubmit="updateUser(event)" enctype="application/x-www-form-urlencoded">
+                        <div class="block col-12 title-one sm-title-four align-items-center">
+                            <span class="icon icon-md icon-rounded icon-bold margin-right-six">
+								<i class="XO-person"></i>
+							</span>
+                            <span class="tag tag-blank tag-bold padding-left-none">Editer Utilisateur</span>
+                        </div>
+                        <div class="break-five"></div>
+                        <input name="id" type="hidden" />
+                        <div class="col-9 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Pseudo</span>
+                            <div class="position-relative">
+                                <input onblur="fieldValidation(this)" name="username" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Pseudo" />
+                            </div>
+                        </div>
+                        <div class="col-3 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Type</span>
+                            <select name="type" class="formbox formbox-md horizontal-fluid">
+								<option value="-1">Client</option>
+								<option value="0">Employer</option>
+								<option value="1">Administrateur</option>
+							</select>
+                        </div>
+                        <div class="col-6 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Prenom</span>
+                            <input onblur="fieldValidation(this)" name="firstname" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Prenom" />
+                        </div>
+                        <div class="col-6 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Nom</span>
+                            <input onblur="fieldValidation(this)" name="lastname" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Nom" />
+                        </div>
+                        <div class="col-4 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Telephone</span>
+                            <input onblur="phoneValidation(this)" name="phone" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Telephone" />
+                        </div>
+                        <div class="col-4 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Email</span>
+                            <input onblur="emailValidation(this)" name="email" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Email" />
+                        </div>
+                        <div class="col-4 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Cin</span>
+                            <input onblur="fieldValidation(this)" name="cin" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Cin" />
+                        </div>
+                        <div class="col-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Adresse</span>
+                            <input onblur="fieldValidation(this)" name="address" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Adresse" />
+                        </div>
+                        <div class="col-6 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Ville</span>
+                            <input onblur="fieldValidation(this)" name="city" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Ville" />
+                        </div>
+                        <div class="col-6 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Pays</span>
+                            <input onblur="fieldValidation(this)" name="country" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Pays" />
+                        </div>
+                        <div class="col-3 md-6 sm-6">
+                            <button type="submit" class="vldbtn btn btn-md btn-bold horizontal-fluid">MODIFIER</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

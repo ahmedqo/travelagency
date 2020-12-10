@@ -1,0 +1,111 @@
+<section id="menu"></section>
+<section class="block horizontal-fluid justify-content-center padding-vertical-one md-padding-none sm-padding-none">
+    <div class="col-5 lg-12 md-12 sm-12">
+        <form class="block justify-content-between align-items-center" onsubmit="createUser(event)" enctype="application/x-www-form-urlencoded">
+            <div class="col-12">
+                <h1 class="title-four txt-bold">Inscription</h1>
+            </div>
+            <div class="break-five"></div>
+            <div class="block justify-content-center">
+                <div class="col-max">
+                    <span class="bubble icon icon-sm icon-rounded icon-bold">
+						<span style="font-size: 1rem; font-weight: bolder;">1</span>
+                    </span>
+                </div>
+                <div class="col-max">
+                    <span class="bubble icon icon-sm icon-rounded icon-bold">
+						<span style="font-size: 1rem; font-weight: bolder;">2</span>
+                    </span>
+                </div>
+                <div class="col-max">
+                    <span class="bubble icon icon-sm icon-rounded icon-bold">
+						<span style="font-size: 1rem; font-weight: bolder;">3</span>
+                    </span>
+                </div>
+                <div class="col-max">
+                    <span class="bubble icon icon-sm icon-rounded icon-bold">
+						<span style="font-size: 1rem; font-weight: bolder;">4</span>
+                    </span>
+                </div>
+                <div class="col-max">
+                    <span class="bubble icon icon-sm icon-rounded icon-bold">
+						<span style="font-size: 1rem; font-weight: bolder;">5</span>
+                    </span>
+                </div>
+            </div>
+            <div class="wizard horizontal-fluid">
+                <div class="col-12">
+                    <span class="tag tag-md tag-blank tag-bold padding-left-none">Prenom</span>
+                    <input onblur="fieldValidation(this)" name="firstname" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Prenom" />
+                </div>
+                <div class="col-12">
+                    <span class="tag tag-md tag-blank tag-bold padding-left-none">Nom</span>
+                    <input onblur="fieldValidation(this)" name="lastname" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Nom" />
+                </div>
+            </div>
+            <div class="wizard horizontal-fluid">
+                <div class="col-12">
+                    <span class="tag tag-md tag-blank tag-bold padding-left-none">Telephone</span>
+                    <input onblur="phoneValidation(this)" name="phone" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Telephone" />
+                </div>
+                <div class="col-12">
+                    <span class="tag tag-md tag-blank tag-bold padding-left-none">Email</span>
+                    <input onblur="emailValidation(this)" name="email" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Email" />
+                </div>
+            </div>
+            <div class="wizard horizontal-fluid">
+                <div class="col-12">
+                    <span class="tag tag-md tag-blank tag-bold padding-left-none">Cin</span>
+                    <input onblur="fieldValidation(this)" name="cin" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Cin" />
+                </div>
+                <div class="col-12">
+                    <span class="tag tag-md tag-blank tag-bold padding-left-none">Pseudo</span>
+                    <input onblur="fieldValidation(this)" name="username" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Pseudo" />
+                </div>
+            </div>
+            <div class="wizard horizontal-fluid">
+                <div class="col-12">
+                    <span class="tag tag-md tag-blank tag-bold padding-left-none">Adresse</span>
+                    <input onblur="fieldValidation(this)" name="address" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Adresse" />
+                </div>
+                <div class="col-12">
+                    <span class="tag tag-md tag-blank tag-bold padding-left-none">Ville</span>
+                    <input onblur="fieldValidation(this)" name="city" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Ville" />
+                </div>
+                <div class="col-12">
+                    <span class="tag tag-md tag-blank tag-bold padding-left-none">Pays</span>
+                    <input onblur="fieldValidation(this)" name="country" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Pays" />
+                </div>
+            </div>
+            <div class="wizard horizontal-fluid">
+                <div class="col-12">
+                    <span class="tag tag-md tag-blank tag-bold padding-left-none">Mot De Passe</span>
+                    <div class="position-relative">
+                        <i class="XO-eye position-absolute position-right-center" onclick="passToText(event)" style="margin-right: 14px; cursor: pointer;"></i>
+                        <input onblur="passwordValidation(this)" name="password" type="password" class="formbox formbox-md horizontal-fluid" style="padding-right: 40px;" placeholder="Mot De Passe" />
+                    </div>
+                </div>
+                <div class="col-12">
+                    <span class="tag tag-md tag-blank tag-bold padding-left-none">Confirmer Mot De Passe</span>
+                    <div class="position-relative">
+                        <i class="XO-eye position-absolute position-right-center" onclick="passToText(event)" style="margin-right: 14px; cursor: pointer;"></i>
+                        <input onblur="compareValidation(this,':password')" name="confirmPassword" type="password" class="formbox formbox-md horizontal-fluid" style="padding-right: 40px;" placeholder="Confirmer Mot De Passe" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-max">
+                <a class="left icon icon-md icon-rounded icon-bold">
+                    <i class="XO-left-arrow"></i>
+                </a>
+            </div>
+            <div class="col-max">
+                <a class="right icon icon-md icon-rounded icon-bold">
+                    <i class="XO-right-arrow"></i>
+                </a>
+            </div>
+            <div class="col-3 md-6 sm-6 sbt">
+                <button type="submit" class="vldbtn btn btn-md btn-bold horizontal-fluid">S'INSCRIRE</button>
+            </div>
+        </form>
+    </div>
+</section>

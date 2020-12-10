@@ -1,0 +1,234 @@
+<section class="block justify-content-end fluid">
+    <section id="sidebar"></section>
+    <section class="col-10 lg-9 md-12 sm-12 bg md-padding-six sm-padding-six">
+        <div class="hidden md-visible sm-visible">
+            <div class="block align-items-center justify-content-between collapse">
+                <v class="col-max">
+                    <a onclick="goTo('/')" class="txt-bold">
+                        <i class="logo" style="font-size: 2rem;"></i>
+                    </a>
+                </v>
+                <div class="col-max">
+                    <a onclick="sideBarSystem()" class="icon icon-lg icon-bold">
+                        <i class="XO-list"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 hidden md-visible sm-visible"></div>
+        <div class="block justify-content-center">
+            <div class="col-8 lg-12 md-12 sm-12 padding-six md-padding-none sm-padding-none">
+                <div class="col-12 bg-light">
+                    <form class="block justify-content-end" onsubmit="createTrip(event)" enctype="application/x-www-form-urlencoded">
+                        <div class="block col-12 title-one sm-title-four align-items-center">
+                            <span class="icon icon-md icon-rounded icon-bold margin-right-six">
+								<i class="XO-trip-plus"></i>
+							</span>
+                            <span class="tag tag-blank tag-bold padding-left-none">Nouveau Voyage</span>
+                        </div>
+                        <div class="break-five"></div>
+                        <div class="col-12 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Images</span>
+                            <input onchange="loadImages(this.files)" onblur="imagesValidation(this,':images')" name="image" type="file" class="formbox formbox-md horizontal-fluid" multiple />
+                        </div>
+                        <div name="images" class="block col-12 padding-none"></div>
+                        <div class="col-12 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Titre</span>
+                            <input onblur="fieldValidation(this)" name="title" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Titre" />
+                        </div>
+                        <div class="col-12 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Description</span>
+                            <div class="toolbar">
+                                <div class="tool-box">
+                                    <div class="tool-wrapper">
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="indent" class="tool-btn">
+												<i class="XO-upload" style="transform: rotate(90deg);"></i>
+											</button>
+                                        </div>
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="outdent" class="tool-btn">
+												<i class="XO-upload" style="transform: rotate(-90deg);"></i>
+											</button>
+                                        </div>
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="justifyLeft" class="tool-btn">
+												<i class="XO-text-left"></i>
+											</button>
+                                        </div>
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="justifyCenter" class="tool-btn">
+												<i class="XO-text-center"></i>
+											</button>
+                                        </div>
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="justifyRight" class="tool-btn">
+												<i class="XO-text-right"></i>
+											</button>
+                                        </div>
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="justifyFull" class="tool-btn">
+												<i class="XO-text-justify"></i>
+											</button>
+                                        </div>
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="bold" class="tool-btn">
+												<i class="XO-bold"></i>
+											</button>
+                                        </div>
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="italic" class="tool-btn">
+												<i class="XO-italic"></i>
+											</button>
+                                        </div>
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="underline" class="tool-btn">
+												<i class="XO-underline"></i>
+											</button>
+                                        </div>
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="strikethrough" class="tool-btn">
+												<i class="XO-strikethrought"></i>
+											</button>
+                                        </div>
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="insertOrderedList" class="tool-btn">
+												<i class="XO-olist"></i>
+											</button>
+                                        </div>
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="insertUnorderedList" class="tool-btn">
+												<i class="XO-list"></i>
+											</button>
+                                        </div>
+                                        <div class="tool">
+                                            <input onchange="richText(this)" type="color" style="height: 100%;" data-command="foreColor" class="tool-btn" />
+                                        </div>
+                                        <div class="tool">
+                                            <input onchange="richText(this)" type="color" style="height: 100%;" data-command="backColor" class="tool-btn" />
+                                        </div>
+                                        <div class="tool">
+                                            <button onclick="richText(this)" type="button" data-command="removeFormat" class="tool-btn">
+												<i class="XO-times"></i>
+											</button>
+                                        </div>
+                                    </div>
+                                    <div class="tool-wrapper">
+                                        <div class="tool sec">
+                                            <button onclick="setUrl(this)" type="button" class="tool-btn">
+												<i class="XO-link"></i>
+											</button>
+                                            <input type="text" placeholder="url" />
+                                        </div>
+                                        <div class="tool sec">
+                                            <button onclick="setImg(this)" type="button" class="tool-btn">
+												<i class="XO-figure"></i>
+											</button>
+                                            <input type="text" placeholder="image url" />
+                                        </div>
+                                        <div class="tool sec">
+                                            <select onchange="setSize(this)">
+												<option value="8px">8px</option>
+												<option value="10px">10px</option>
+												<option value="12px">12px</option>
+												<option value="14px">14px</option>
+												<option value="16px">16px</option>
+												<option value="18px">18px</option>
+												<option value="20px">20px</option>
+												<option value="22px">22px</option>
+												<option value="24px">24px</option>
+												<option value="26px">26px</option>
+												<option value="28px">28px</option>
+												<option value="30px">30px</option>
+												<option value="32px">32px</option>
+												<option value="34px">34px</option>
+												<option value="36px">36px</option>
+												<option value="38px">38px</option>
+												<option value="40px">40px</option>
+												<option value="42px">42px</option>
+												<option value="44px">44px</option>
+												<option value="46px">46px</option>
+												<option value="48px">48px</option>
+												<option value="50px">50px</option>
+												<option value="52px">52px</option>
+												<option value="54px">54px</option>
+											</select>
+                                        </div>
+                                        <div class="tool sec">
+                                            <select onchange="setHeading(this)">
+												<option value="title-one">header 1</option>
+												<option value="title-two">header 2</option>
+												<option value="title-three">header 3</option>
+												<option value="title-four">header 4</option>
+												<option value="title-five">header 5</option>
+												<option value="title-six">header 6</option>
+											</select>
+                                        </div>
+                                        <div class="tool sec">
+                                            <select onchange="setFont(this)">
+												<option value="arial">arial</option>
+												<option value="fantasy">fantasy</option>
+												<option value="crusive">crusive</option>
+												<option value="fangsong">fangsong</option>
+												<option value="emoji">emoji</option>
+												<option value="serif">serif</option>
+												<option value="sans-serif">sans-serif</option>
+												<option value="system-ui">system-ui</option>
+												<option value="revert">revert</option>
+												<option value="math">math</option>
+												<option value="monospace">monospace</option>
+												<option value="none">none</option>
+											</select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div onblur="descriptionValidation(this)" name="description" contenteditable="true"></div>
+                            </div>
+                        </div>
+                        <div class="col-12 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Destination</span>
+                            <input onblur="fieldValidation(this)" name="destination" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Destination" />
+                        </div>
+                        <div class="col-12 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Hotel</span>
+                            <input onblur="fieldValidation(this)" name="hotel" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Hotel" />
+                        </div>
+                        <div class="col-6 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Prix</span>
+                            <input onblur="fieldValidation(this)" name="price" type="number" min="0" class="formbox formbox-md horizontal-fluid" placeholder="Prix" />
+                        </div>
+                        <div class="col-6 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Place</span>
+                            <input onblur="fieldValidation(this)" name="sits" type="number" min="0" class="formbox formbox-md horizontal-fluid" placeholder="Places" />
+                        </div>
+                        <div class="col-12 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Lieu de ramassage</span>
+                            <div class="block">
+                                <div class="col padding-none">
+                                    <input onblur="pickupsValidation(this,':pickups')" name="tags" type="text" class="formbox formbox-md horizontal-fluid" placeholder="Lieu De Rammasage" />
+                                </div>
+                                <div class="padding-left-six">
+                                    <button type="button" class="icon icon-md icon-bold">
+										<i onclick="setTag(':tags')" class="XO-plus"></i>
+									</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div name="pickups" class="block col-12 padding-none"></div>
+                        <div class="col-6 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Date</span>
+                            <input onblur="dateValidation(this)" name="date" type="date" class="formbox formbox-md horizontal-fluid" placeholder="Date" />
+                        </div>
+                        <div class="col-6 md-12 sm-12">
+                            <span class="tag tag-md tag-blank tag-bold padding-left-none">Temp</span>
+                            <input onblur="fieldValidation(this)" name="time" type="time" class="formbox formbox-md horizontal-fluid" placeholder="Temp" />
+                        </div>
+                        <div class="col-3 md-6 sm-6">
+                            <button type="submit" class="vldbtn btn btn-md btn-bold horizontal-fluid">AJOUTER</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
